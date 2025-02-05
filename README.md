@@ -45,21 +45,31 @@ minikube delete
 
 ## Desplegar componentes en Kubernetes
 
+Define los roles necesarios para la aplicación
+
 ```sh
 kubectl apply -f kubernetes/lease-role.yaml
 ```
+
+Crea una cuenta de servicio para la aplicación
 
 ```sh
 kubectl apply -f kubernetes/service-account.yaml
 ```
 
+Asocia la cuenta de servicio con los roles definidos
+
 ```sh
 kubectl apply -f kubernetes/lease-rolebinding.yaml
 ```
 
+Define el lease que se utilizará para la elección de líder
+
 ```sh
 kubectl apply -f kubernetes/lease.yaml
 ```
+
+Despliega la aplicación en Kubernetes
 
 ```sh
 kubectl apply -f kubernetes/deployment.yaml
