@@ -1,0 +1,30 @@
+# Archivos de configuración específicos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de IDEs
+/.idea/
+/*.iml
+/*.ipr
+/*.iws
+/.project
+/.classpath
+/.settings/
+
+# Archivos de compilación y dependencias
+/target/
+/build/
+/out/
+/*.jar
+/*.war
+/*.ear
+
+# Archivos de configuración de Maven
+/.mvn/
+/pom.xml.tag
+/pom.xml.releaseBackup
+/pom.xml.versionsBackup
+
+# Archivos de configuración de logs
+/logs/
+/*.log
