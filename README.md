@@ -113,7 +113,9 @@ kubectl scale deployment spring-leader-election --replicas 0
 
 ## Demo
 
-Despliega el deployment de kubernetes. Cuando revises los logs, podras ver como entre los diferentes pods se coordina el líder. Ejemplo:
+Despliega el deployment de kubernetes. Cuando revises los logs, podras ver como entre los diferentes pods se coordina el líder.
+
+Coordinación:
 
 ```
 {"timestamp":"2025-02-05 10:05:54.309", "level":"INFO", "message":"[7160e425-14ba-4dd5-a1ae-a47c3526fe40] lease held by: 73f1e22e-0462-43b8-a5e8-33d7a0556ec1"}
@@ -133,7 +135,7 @@ Despliega el deployment de kubernetes. Cuando revises los logs, podras ver como 
 {"timestamp":"2025-02-05 10:06:06.076", "level":"INFO", "message":"[069d2f63-80a1-4425-b449-1ad451cd22e0] lease held by: 73f1e22e-0462-43b8-a5e8-33d7a0556ec1"}
 ```
 
-Se puede ver tambien como el líder renueva con preferencia:
+Se puede ver tambien como el líder renueva con preferencia
 
 ```
 {"timestamp":"2025-02-05 10:08:06.745", "level":"INFO", "message":"[73f1e22e-0462-43b8-a5e8-33d7a0556ec1] lease: LeaseSpec(acquireTime=null, holderIdentity=73f1e22e-0462-43b8-a5e8-33d7a0556ec1, leaseDurationSeconds=60, leaseTransitions=null, preferredHolder=null, renewTime=2025-02-05T10:07:21.368014Z, strategy=null, additionalProperties={})"}
