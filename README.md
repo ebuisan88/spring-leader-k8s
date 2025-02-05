@@ -2,8 +2,6 @@
 
 Aplicación Spring Boot que implementa la elección de líder en Kubernetes.
 
-Funciona con dos modos: `ConfigMap` y `Lease`.
-
 ## Requisitos
 
 - Java 17
