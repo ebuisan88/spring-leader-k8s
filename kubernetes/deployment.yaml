@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-leader-election
+  namespace: default
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: spring-leader-election
+  template:
+    metadata:
+      labels:
+        app: spring-leader-election
+    spec:
+      serviceAccountName: spring-leader-election-sa
+      containers:
+      - name: spring-leader-election
+        image: spring-leader-election:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
